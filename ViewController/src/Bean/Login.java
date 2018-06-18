@@ -23,7 +23,9 @@ public class Login {
         this.Hidden = Hidden;
     }
     
-
+    public String sample(){
+        return null;
+    }
     public String getHidden() {
         try{
             DCBindingContainer dc = (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
