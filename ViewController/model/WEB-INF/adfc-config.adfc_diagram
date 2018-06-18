@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">Login</property>
+      <property
+         name="x">186.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Login&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">112.29883</property>
+      <property
+         name="page">/Pages/Login.jspx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">Registration</property>
+      <property
+         name="x">506.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>Registration&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">108.0918</property>
+      <property
+         name="page">/Pages/Registration.jspx</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">Registration</property>
+      <property
+         name="sdm:polyPoints">R50,227.0,111.94824,465.0,107.74121,L50</property>
+   </ControlFlowCase>
+</SDM>

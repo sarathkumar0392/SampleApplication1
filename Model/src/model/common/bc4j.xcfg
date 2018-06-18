@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!---->
+<BC4JConfig xmlns="http://xmlns.oracle.com/bc4j/configuration" version="11.1">
+  <AppModuleConfigBag ApplicationName="Model.AppModule">
+    <AppModuleConfig name="AppModuleLocal" jbo.project="Model.Model" ApplicationName="Model.AppModule"
+                     DeployPlatform="LOCAL">
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/TRNUSER11DS"/>
+      <Security AppModuleJndiName="Model.AppModule"/>
+    </AppModuleConfig>
+    <AppModuleConfig name="AppModuleShared" jbo.project="Model.Model" ApplicationName="Model.AppModule"
+                     DeployPlatform="LOCAL">
+      <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/TRNUSER11DS"/>
+      <Security AppModuleJndiName="Model.AppModule"/>
+    </AppModuleConfig>
+  </AppModuleConfigBag>
+  <AppModuleConfigBag ApplicationName="model.AppModule" default="AppModuleShared">
+    <AppModuleConfig name="AppModuleLocal" jbo.project="Model.Model" ApplicationName="model.AppModule"
+                     DeployPlatform="LOCAL" JDBCName="TRNUSER11">
+      <Database jbo.TypeMapEntries="OracleApps"/>
+      <Security AppModuleJndiName="model.AppModule"/>
+    </AppModuleConfig>
+    <AppModuleConfig name="AppModuleShared" jbo.project="Model.Model" ApplicationName="model.AppModule"
+                     DeployPlatform="LOCAL" JDBCName="TRNUSER11">
+      <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+      <Database jbo.TypeMapEntries="OracleApps"/>
+      <Security AppModuleJndiName="model.AppModule"/>
+    </AppModuleConfig>
+  </AppModuleConfigBag>
+</BC4JConfig>

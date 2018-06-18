@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="Login" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:inputText id="it3" visible="false" value="#{Login.hidden}"/>
+                <af:spacer id="s2" height="20%"/>
+                <af:panelGroupLayout id="pgl2" halign="center" layout="vertical" valign="middle">
+                    <af:inputText value="#{bindings.UserName.inputValue}" label="#{bindings.UserName.hints.label}"
+                                  required="#{bindings.UserName.hints.mandatory}"
+                                  columns="#{bindings.UserName.hints.displayWidth}" autoSubmit="true"
+                                  contentStyle="width:180px;" labelStyle="color:black;"
+                                  maximumLength="#{bindings.UserName.hints.precision}"
+                                  shortDesc="#{bindings.UserName.hints.tooltip}" id="it2">
+                        <f:validator binding="#{bindings.UserName.validator}"/>
+                    </af:inputText>
+                    <af:spacer id="s4" height="5"/>
+                    <af:inputText value="#{bindings.Password.inputValue}" label="#{bindings.Password.hints.label}"
+                                  required="#{bindings.Password.hints.mandatory}" secret="true"
+                                  columns="#{bindings.Password.hints.displayWidth}" autoSubmit="true"
+                                  contentStyle="width:180px;" labelStyle="color:black;"
+                                  maximumLength="#{bindings.Password.hints.precision}"
+                                  shortDesc="#{bindings.Password.hints.tooltip}" id="it1">
+                        <f:validator binding="#{bindings.Password.validator}"/>
+                    </af:inputText>
+                    <af:spacer id="s1" height="5"/>
+                    <af:panelGroupLayout id="pgl1" halign="center" inlineStyle="margin-left: 60px;">
+                        <af:button id="b1" text="Login"/>
+                        <af:spacer id="s3" width="5"/>
+                        <af:button id="b2" text="New Registration" partialSubmit="true" action="Registration"/>
+                    </af:panelGroupLayout>
+                </af:panelGroupLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

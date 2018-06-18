@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="Registration.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:inputText id="it1" value="#{Registration.hidden}" visible="false"/>
+                <af:panelGroupLayout id="pgl1" layout="vertical" valign="middle" halign="center">
+                    <af:panelFormLayout id="pfl1">
+                        <af:inputText value="#{bindings.EmpId.inputValue}" label="#{bindings.EmpId.hints.label}"
+                                      columns="#{bindings.EmpId.hints.displayWidth}" autoSubmit="true"
+                                      contentStyle="width:180px;" labelStyle="color:black;"
+                                      maximumLength="#{bindings.EmpId.hints.precision}"
+                                      shortDesc="#{bindings.EmpId.hints.tooltip}" id="it4">
+                            <f:validator binding="#{bindings.EmpId.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.EmpId.format}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.EmpName.inputValue}" label="#{bindings.EmpName.hints.label}"
+                                      required="#{bindings.EmpName.hints.mandatory}" autoSubmit="true"
+                                      contentStyle="width:180px;" labelStyle="color:black;"
+                                      columns="#{bindings.EmpName.hints.displayWidth}"
+                                      maximumLength="#{bindings.EmpName.hints.precision}"
+                                      shortDesc="#{bindings.EmpName.hints.tooltip}" id="it5">
+                            <f:validator binding="#{bindings.EmpName.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.Password.inputValue}" label="#{bindings.Password.hints.label}"
+                                      required="#{bindings.Password.hints.mandatory}" contentStyle="width:180px;"
+                                      labelStyle="color:black;" columns="#{bindings.Password.hints.displayWidth}"
+                                      secret="true" maximumLength="#{bindings.Password.hints.precision}"
+                                      shortDesc="#{bindings.Password.hints.tooltip}" id="it7">
+                            <f:validator binding="#{bindings.Password.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.ConfirmPassword.inputValue}" secret="true"
+                                      label="#{bindings.ConfirmPassword.hints.label}" contentStyle="width:180px;"
+                                      labelStyle="color:black;" required="#{bindings.ConfirmPassword.hints.mandatory}"
+                                      columns="#{bindings.ConfirmPassword.hints.displayWidth}"
+                                      maximumLength="#{bindings.ConfirmPassword.hints.precision}"
+                                      shortDesc="#{bindings.ConfirmPassword.hints.tooltip}" id="it2">
+                            <f:validator binding="#{bindings.ConfirmPassword.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.EmpEmailId.inputValue}"
+                                      label="#{bindings.EmpEmailId.hints.label}"
+                                      required="#{bindings.EmpEmailId.hints.mandatory}" autoSubmit="true"
+                                      contentStyle="width:180px;" labelStyle="color:black;"
+                                      columns="#{bindings.EmpEmailId.hints.displayWidth}"
+                                      maximumLength="#{bindings.EmpEmailId.hints.precision}"
+                                      shortDesc="#{bindings.EmpEmailId.hints.tooltip}" id="it3">
+                            <f:validator binding="#{bindings.EmpEmailId.validator}"/>
+                        </af:inputText>
+                        <af:inputText value="#{bindings.EmpPhnNo.inputValue}" label="#{bindings.EmpPhnNo.hints.label}"
+                                      required="#{bindings.EmpPhnNo.hints.mandatory}" autoSubmit="true"
+                                      contentStyle="width:180px;" labelStyle="color:black;"
+                                      columns="#{bindings.EmpPhnNo.hints.displayWidth}"
+                                      maximumLength="#{bindings.EmpPhnNo.hints.precision}"
+                                      shortDesc="#{bindings.EmpPhnNo.hints.tooltip}" id="it6">
+                            <f:validator binding="#{bindings.EmpPhnNo.validator}"/>
+                            <af:convertNumber groupingUsed="false" pattern="#{bindings.EmpPhnNo.format}"/>
+                        </af:inputText>
+                        <af:button text="Register" id="b1" partialSubmit="true" action="#{Registration.saveDetails}"/>
+                    </af:panelFormLayout>
+                </af:panelGroupLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="LoginPageDef" Package="Pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="LoginViewObject" RangeSize="25" DataControl="AppModuleDataControl" id="LoginViewObjectIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="LoginViewObjectIterator" id="Attr">
+      <AttrNames>
+        <Item Value="Attr"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LoginViewObjectIterator" id="Password">
+      <AttrNames>
+        <Item Value="Password"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="LoginViewObjectIterator" id="UserName">
+      <AttrNames>
+        <Item Value="UserName"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="LoginViewObjectIterator" id="CreateInsert" InstanceName="AppModuleDataControl.LoginViewObject"
+            DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="createInsertRow"/>
+  </bindings>
+</pageDefinition>

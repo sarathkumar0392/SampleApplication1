@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="RegistrationPageDef"
+                Package="Pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmployeeRegVO" RangeSize="25" DataControl="AppModuleDataControl" id="EmployeeRegVOIterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="EmployeeRegVOIterator" id="ConfirmPassword">
+      <AttrNames>
+        <Item Value="ConfirmPassword"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeRegVOIterator" id="EmpEmailId">
+      <AttrNames>
+        <Item Value="EmpEmailId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeRegVOIterator" id="EmpId">
+      <AttrNames>
+        <Item Value="EmpId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeRegVOIterator" id="EmpName">
+      <AttrNames>
+        <Item Value="EmpName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeRegVOIterator" id="EmpPhnNo">
+      <AttrNames>
+        <Item Value="EmpPhnNo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeRegVOIterator" id="Password">
+      <AttrNames>
+        <Item Value="Password"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

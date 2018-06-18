@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="LoginEntityObject"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="LOGINENTITYOBJECT"
+  AliasName="LoginEntityObject"
+  BindingStyle="OracleName"
+  RowClass="ProgrammaticEntity.LoginEntityObjectImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|DML"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Attribute
+    Name="Attr"
+    IsUpdateable="while_insert"
+    DefaultValue="@0"
+    Domain="oracle.jbo.domain.DBSequence"
+    ColumnName="ATTR"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.DBSequence"
+    ColumnType="NUMBER"
+    TableName="LOGINENTITYOBJECT"
+    PrimaryKey="true"
+    RetrievedOnInsert="true">
+    <DesignTime>
+      <Attr Name="_SequenceName" Value="LoginEntityObject_Attr_SEQ"/>
+      <Attr Name="_SequenceStart" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="UserName"
+    ColumnName="USER_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="$none$"
+    IsQueriable="false"
+    IsPersistent="false"/>
+  <Attribute
+    Name="Password"
+    ColumnName="PASSWORD"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="$none$"
+    IsPersistent="false"
+    IsQueriable="false"/>
+  <Key
+    Name="LoginentityobjectAttrCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"ATTR" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="LOGINENTITYOBJECT_ATTR_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ProgrammaticEntity.LoginEntityObject.Attr"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="LoginentityobjectPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="LOGINENTITYOBJECT_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ProgrammaticEntity.LoginEntityObject.Attr"/>
+    </AttrArray>
+  </Key>
+</Entity>
