@@ -26,6 +26,11 @@ public class Login {
     public String sample(){
         return null;
     }
+    
+    public String sample1(){
+        return null;
+    }
+    
     public String getHidden() {
         try{
             DCBindingContainer dc = (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
